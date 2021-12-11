@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),transparent),url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1px 0;
+    border-bottom: 1px solid grey;
+
+}
+
+
+.textlogo{
+    padding: 20px;
+    font-family: 'poppins',sans-serif;
+    font-weight: 5000;
+    color: white;
+}
+
+.cart-icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+    font-weight: 500;
+   
+    
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+ /* for hover effect  */
+nav ul li a::after{
+    content: '';
+    width: 0%; 
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+ 
+}
+
+nav ul li a:hover::after{
+    width: 50%;
+}
+
+.text-box{
+   
+    color: #fff;
+    position: absolute;
+    bottom: 8%;
+
+}
+
+.text-box p{
+    font-size: 50px;
+    font-weight: 600;
+
+}
+
+.text-box h1{
+    font-size: 150px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+
+
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+        
+    }
+}
+
+
+.text-box h3{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.text-box .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px
+
+}
+
+.text-box a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 3px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.text-box a span{
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 15px;
+    margin-left: 5px;
+    
+}
+
+.social-icons{
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+    color: white;
+}
+.social-icons img{
+    width: 25px;
+    display: block;
+    margin: 25px 5px;
+    margin-bottom: 5px;
+    
+}
+
+
+
+@media (max-width: 960px) {
+    .container{
+        padding:20px;
+    }
+   .text-box h1{
+       font-size: 90px;
+   }
+   .text-box p{
+    font-size: 30px;
+    font-weight: 600;
+   }
+   .text-box h3{
+    font-size: 30px;
+    font-weight: 600;
+   }
+   .text-box span{
+    padding: 10px;
+   }
+   
+  }
+
+  @media (max-width: 760px) {
+    .container{
+        padding:20px;
+    }
+    nav ul{
+      display: inline-flex;
+        padding: 0px;
+    
+    }
+    
+    .text-box h1{
+        font-size: 70px;
+    }
+    .text-box p{
+     font-size: 25px;
+     font-weight: 600;
+    }
+    .text-box h3{
+     font-size: 25px;
+     font-weight: 600;
+    }
+    span{
+       display: none;
+    }
+   
+   }
+
+  
+   @media (max-width: 580px) {
+    .container{
+        padding:20px;
+    }
+   
+    .text-box h1{
+        font-size: 70px;
+    }
+    .text-box p{
+     font-size: 25px;
+     font-weight: 600;
+    }
+    .text-box h3{
+     font-size: 25px;
+     font-weight: 600;
+    }
+    span{
+       display: none;
+    }
+   
+    
+   }
+
+  
